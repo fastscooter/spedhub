@@ -1,0 +1,6 @@
+@SpedHub.UI_HostAddress = http://localhost:5262
+
+GET {{SpedHub.UI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

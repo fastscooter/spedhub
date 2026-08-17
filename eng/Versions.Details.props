@@ -1,0 +1,15 @@
+
+ <Project>
+    <PropertyGroup>
+     <!-- Versioning Properties Go Here -->
+		<StableVersion>10.0.10</StableVersion>
+		<MicrosoftAspNetCoreOpenApiVersion>$(StableVersion)</MicrosoftAspNetCoreOpenApiVersion>
+		<MicrosoftEntityFrameworkCoreVersion>$(StableVersion)</MicrosoftEntityFrameworkCoreVersion>
+		<MicrosoftEntityFrameworkCoreDesignVersion>$(StableVersion)</MicrosoftEntityFrameworkCoreDesignVersion>
+		<MicrosoftEntityFrameworkCoreSqlServerVersion>$(StableVersion)</MicrosoftEntityFrameworkCoreSqlServerVersion>
+		<MicrosoftEntityFrameworkCoreToolsVersion>11.0.0-preview.7.26366.102</MicrosoftEntityFrameworkCoreToolsVersion>
+		<SwashbuckleAspNetCoreSwaggerVersion>10.2.3</SwashbuckleAspNetCoreSwaggerVersion>
+		<SwashbuckleAspNetCoreSwaggerGenVersion>10.2.3</SwashbuckleAspNetCoreSwaggerGenVersion>
+		<SwashbuckleAspNetCoreSwaggerUIVersion>10.2.3</SwashbuckleAspNetCoreSwaggerUIVersion>
+    </PropertyGroup>
+ </Project>

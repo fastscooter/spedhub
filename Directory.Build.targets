@@ -1,0 +1,42 @@
+<Project>
+
+  <Import Project="Sdk.targets" Sdk="Microsoft.DotNet.Arcade.Sdk" />
+
+
+	<ItemGroup>
+		<PackageReference Remove="Microsoft.SourceLink.GitHub" />
+		<PackageReference Remove="Microsoft.SourceLink.Vsts.Git" />
+	</ItemGroup>
+
+	<Choose>
+		<When Condition="'$(IsEntityFrameworkWebProject)'=='true'">
+			<ItemGroup>
+				<PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="$(SwashbuckleAspNetCoreSwaggerVersion)" />
+				<PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="$(SwashbuckleAspNetCoreSwaggerGenVersion)" />
+				<PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="$(SwashbuckleAspNetCoreSwaggerUIVersion)" />
+				<PackageReference Include="Microsoft.EntityFrameworkCore" Version="$(MicrosoftEntityFrameworkCoreVersion)" />
+				<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="$(MicrosoftEntityFrameworkCoreSqlServerVersion)" />
+				<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="$(MicrosoftEntityFrameworkCoreToolsVersion)">
+					<PrivateAssets>all</PrivateAssets>
+					<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+				</PackageReference>
+				<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="$(MicrosoftEntityFrameworkCoreDesignVersion)">
+					<PrivateAssets>all</PrivateAssets>
+					<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+				</PackageReference>
+				<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="$(MicrosoftAspNetCoreOpenApiVersion)" />
+			</ItemGroup>
+		</When>
+	</Choose>
+
+
+	<Choose>
+		<When Condition="'$(IsEntityFrameworkCoreProject)'=='true'">
+			<ItemGroup>
+				<PackageReference Include="Microsoft.EntityFrameworkCore" Version="$(MicrosoftEntityFrameworkCoreVersion)" />
+				<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="$(MicrosoftEntityFrameworkCoreSqlServerVersion)" />
+			</ItemGroup>
+		</When>
+	</Choose>
+
+</Project>

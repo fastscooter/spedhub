@@ -1,0 +1,28 @@
+<Solution>
+  <Folder Name="/build/">
+    <File Path=".editorconfig" />
+    <File Path=".gitignore" />
+    <File Path="Directory.Build.props" />
+    <File Path="Directory.Build.targets" />
+    <File Path="EFCoreToolsDesignTime.ps1" />
+    <File Path="global.json" />
+    <File Path="NuGet.config" />
+  </Folder>
+  <Folder Name="/eng/">
+    <File Path="eng/Versions.props" />
+    <File Path="eng/Versions.Details.props" />
+    <File Path="eng/Versions.Details.xml" />
+  </Folder>
+  <Folder Name="/tools/">
+    <Project Path="tools/ConsoleTester/ConsoleTester.csproj" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src/SpedHub.Data/SpedHub.Data.csproj" Id="e95afa5b-631c-4b68-a0bd-2fde53bb1897" />
+    <Project Path="src/SpedHub.DB/SpedHub.DB.sqlproj" Id="e437bb04-f63d-4099-a0e9-3c1ba176ca25">
+      <Build />
+      <Deploy />
+    </Project>
+    <Project Path="src/SpedHub.Domain/SpedHub.Domain.csproj" Id="e2dfaeaf-dae7-4fc2-88d0-23d56defa204" />
+    <Project Path="src/SpedHub.UI/SpedHub.API.csproj" Id="add6ae87-8d01-4896-bf35-2d2a673cb8b8" />
+  </Folder>
+</Solution>

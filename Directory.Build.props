@@ -1,0 +1,17 @@
+<Project>
+
+  <Import Project="Sdk.props" Sdk="Microsoft.DotNet.Arcade.Sdk" />
+
+	<PropertyGroup>
+		<NoWarn>$(NoWarn);SQL71502</NoWarn>
+	</PropertyGroup>
+
+	<Choose>
+		<When Condition="'$(IsEntityFrameworkWebProject)'=='true'">
+			<PropertyGroup>
+				<GenerateDocumentationFile>true</GenerateDocumentationFile>
+			</PropertyGroup>
+		</When>
+	</Choose>
+
+</Project>
